@@ -1,0 +1,45 @@
+# Data files - these are large and reproducible from the scripts
+data/
+
+# Checkpoints - too large for git, often >500MB
+checkpoints/
+
+# Logs from training runs
+*.log
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Backup files left by patches
+*.py.bak
+
+# Environment / cache
+.venv/
+venv/
+.cache/
+.pytest_cache/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Rendered views (huge, regenerable)
+*.png
+# Stuff inside scripts/ that shouldn't be tracked
+scripts/t1/
+scripts/t1_n100/
+scripts/t_plain/
+scripts/manifest*.pt
+scripts/nohup.out
+scripts/*.pt
+
+# Jupyter checkpoints
+**/.ipynb_checkpoints/
+
+# Mesh files anywhere
+**/meshes/
+*.obj
