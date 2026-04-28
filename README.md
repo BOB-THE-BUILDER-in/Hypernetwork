@@ -1,3 +1,28 @@
+## Pretrained models and data
+
+Trained checkpoints and processed data are hosted separately due to size.
+
+- **Hugging Face dataset**: [bobthebuilderinternational/hypernet-checkpoints](https://huggingface.co/datasets/bobthebuilderinternational/hypernet-checkpoints) (private)
+- Includes: anchors, autoencoder, mappers, watertight meshes, SDF samples, shape-SIRENs, image-SIRENs, hypernets
+
+### Restore on a fresh machine
+
+​```bash
+git clone https://github.com/BOB-THE-BUILDER-in/Hypernetwork.git /workspace/hypernet
+cd /workspace/hypernet
+pip install -U "huggingface_hub[cli]"
+hf auth login
+
+hf download bobthebuilderinternational/hypernet-checkpoints \
+    --repo-type dataset --local-dir /tmp/restore
+
+tar xzf /tmp/restore/tier_essential.tar.gz
+tar xzf /tmp/restore/tier_data.tar.gz
+tar xzf /tmp/restore/tier_hypernets.tar.gz
+​```
+
+
+
 # hypernet → shape pipeline
 
 Image-to-3D experiments via per-shape SIRENs and learned weight-space latent codes.
