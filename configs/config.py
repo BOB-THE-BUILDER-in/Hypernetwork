@@ -67,7 +67,7 @@ class ShapeSirenCfg:
 class HyperNetCfg:
     latent_dim: int = 64
     view_embed_dim: int = 32
-    head_hidden: int = 64  # shrunken from 256 -> ~5M param hypernets
+    head_hidden: int = 256
     head_layers: int = 3
     final_init_scale: float = 1e-2
 

@@ -111,7 +111,7 @@ def download():
     OOD_DIR.mkdir(parents=True, exist_ok=True)
     import objaverse
     all_uids = objaverse.load_uids()
-    rng = random.Random(CFG.seed + 1000)  # different seed from training downloads
+    rng = random.Random(CFG.seed + 2000)  # different seed from training downloads
     candidates = rng.sample(all_uids, 200)
 
     log(f"download: trying up to 200 candidates for {OBJ_TAG}")
